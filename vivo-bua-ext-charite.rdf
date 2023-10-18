@@ -3,6 +3,7 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dct="http://purl.org/dc/terms/"
     xmlns:hr="http://vivo.cornell.edu/ns/hr/0.9/hr.owl#"
     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
     xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -20,6 +21,10 @@
     xmlns:vitro-public="http://vitro.mannlib.cornell.edu/ns/vitro/public#"
     xml:base="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/char#">
     <owl:Ontology rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/char#">
+        <dct:creator rdf:resource="https://orcid.org/0000-0003-4325-5751"/>
+        <dct:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/deed.en"/>
+        <dct:title xml:lang="en">VIVO Core Extension für BUA - Charité Universitätzmedizin Berlin</dct:title>
+        <dct:title xml:lang="de">VIVO Core-Erweiterung für BUA - Charité Universitätzmedizin Berlin</dct:title>
         <vitro:ontologyPrefixAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vivo-bua-char</vitro:ontologyPrefixAnnot>
         <rdfs:label xml:lang="de">VIVO Core Extension für BUA - Charité Universitätzmedizin Berlin</rdfs:label>
     </owl:Ontology>
