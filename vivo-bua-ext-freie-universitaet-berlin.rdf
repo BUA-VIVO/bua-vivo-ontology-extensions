@@ -36,15 +36,6 @@
         <rdfs:label xml:lang="de-de">Abteilung</rdfs:label>
         <rdfs:label xml:lang="en-us">Division</rdfs:label>
     </owl:Class>
-    <owl:Class rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/fub#Professur">
-        <!-- rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#AcademicDepartment"/-->
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professur Mittellatein</obo:IAO_0000112>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="de-DE">Fachspezifische Forschungseinheit einer Hochschuleinrichtung</obo:IAO_0000115>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="en-US">Subject-specific research unit of a higher education institution</obo:IAO_0000115>
-        <rdfs:label xml:lang="de-de">Professur</rdfs:label>
-        <rdfs:label xml:lang="en-us">Professorship</rdfs:label>
-    </owl:Class>
     <owl:Class rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/fub#Seminar">
         <!-- rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#AcademicDepartment"/-->
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>

@@ -316,9 +316,8 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="en-US">Subject-specific research and
             Research and administrative unit of a higher education institution</obo:IAO_0000115>
         <rdfs:label xml:lang="de-de">Professur</rdfs:label>
-        <rdfs:label xml:lang="en-us">Professors Unit</rdfs:label>
+        <rdfs:label xml:lang="en-us">Professorship</rdfs:label>
     </owl:Class>
-    
     <!-- http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#Fachgebiet -->
 
     <owl:Class rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#Fachgebiet">
