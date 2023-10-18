@@ -1,0 +1,13 @@
+site_name: BUA VIVO Ontology extensions
+site_description: Extensions to the vivo ontologies describing entities in the German academic domain
+site_author: Rolf Guescini
+docs_dir: docs/
+repo_name: BUA-VIVO/bua-vivo-ontology-extensions
+repo_url: https://github.com/BUA-VIVO/bua-vivo-ontology-extensions
+nav:
+  - BUA Vivo Ontology extensions: index.md
+  - BUA wide Ontology extensions: bua.md
+  - Freie Univerität Berlin Ontology extensions: fub.md
+  - Charité – Universitätsmedizin Berlin Ontology extensions: char.md
+theme:
+  name: material
