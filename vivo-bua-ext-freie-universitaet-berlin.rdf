@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF  xmlns="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/fub#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:hr="http://vivo.cornell.edu/ns/hr/0.9/hr.owl#"
+    xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:obo="http://purl.obolibrary.org/obo/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:bibo="http://purl.org/ontology/bibo/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:owl2="http://www.w3.org/2006/12/owl2-xml#"
+    xmlns:vivo="http://vivoweb.org/ontology/core#"
+    xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
+    xmlns:vivoc="http://vivo.library.cornell.edu/ns/0.1#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:vivo-de="http://vivoweb.org/ontology/core/de#"
+    xmlns:vitro-public="http://vitro.mannlib.cornell.edu/ns/vitro/public#"
+    xml:base="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/fub#">
+    <owl:Ontology rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/fub#">
+        <vitro:ontologyPrefixAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vivo-bua-fub</vitro:ontologyPrefixAnnot>
+        <rdfs:label xml:lang="de">VIVO Core Extension für BUA - Freie Universität</rdfs:label>
+    </owl:Ontology>
+    <owl:Class rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/fub#Abteilung">
+        <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#AcademicDepartment" />
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="de-DE">Fachspezifische Forschungseinheit einer Hochschuleinrichtung</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="en-US">Subject-specific research unit of a higher education institution</obo:IAO_0000115>
+        <rdfs:label xml:lang="de-de">Abteilung</rdfs:label>
+        <rdfs:label xml:lang="en-us">Division</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/fub#Professur">
+        <!-- rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#AcademicDepartment"/-->
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professur Mittellatein</obo:IAO_0000112>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="de-DE">Fachspezifische Forschungseinheit einer Hochschuleinrichtung</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="en-US">Subject-specific research unit of a higher education institution</obo:IAO_0000115>
+        <rdfs:label xml:lang="de-de">Professur</rdfs:label>
+        <rdfs:label xml:lang="en-us">Professorship</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/fub#Seminar">
+        <!-- rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#AcademicDepartment"/-->
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ägyptologisches Seminar</obo:IAO_0000112>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="de-DE">Fachspezifische Forschungseinheit einer Hochschuleinrichtung</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="en-US">Subject-specific research unit of a higher education institution</obo:IAO_0000115>
+        <rdfs:label xml:lang="de-de">Seminar</rdfs:label>
+        <rdfs:label xml:lang="en-us">Seminar</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/fub#Wissenschaftsbereich">
+        <!-- rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#AcademicDepartment"/-->
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abteilung Ostasiatische Kunstgeschichte</obo:IAO_0000112>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="de-DE">Forschungsbereich einer Hochschuleinrichtung</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="en-US">Research field of a higher education institution</obo:IAO_0000115>
+        <rdfs:label xml:lang="de-de">Wissenschaftsbereich</rdfs:label>
+        <rdfs:label xml:lang="en-us">Field Of Science</rdfs:label>
+    </owl:Class>
+</rdf:RDF>

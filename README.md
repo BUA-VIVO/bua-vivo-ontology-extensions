@@ -1,2 +1,4 @@
 # bua-vivo-ontology-extensions
-Extensions to VIVO ontologies describing entities in the German academic domain
+These ontologies are extensions of the VIVO and VIVO-DE ontoliogies, describing the German academic domain
+
+Documentation: https://bua-vivo.github.io/bua-vivo-ontology-extensions/
