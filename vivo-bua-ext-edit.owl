@@ -1,0 +1,485 @@
+Prefix(:=<http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(hr:=<http://vivo.cornell.edu/ns/hr/0.9/hr.owl#>)
+Prefix(ns:=<http://www.w3.org/2003/06/sw-vocab-status/ns#>)
+Prefix(dct:=<http://purl.org/dc/terms/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(bibo:=<http://purl.org/ontology/bibo/>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(owl2:=<http://www.w3.org/2006/12/owl2-xml#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(vivo:=<http://vivoweb.org/ontology/core#>)
+Prefix(vitro:=<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>)
+Prefix(vivoc:=<http://vivo.library.cornell.edu/ns/0.1#>)
+Prefix(dcterms:=<http://purl.org/dc/terms/>)
+Prefix(vivo-de:=<http://vivoweb.org/ontology/core/de#>)
+Prefix(vitro-public:=<http://vitro.mannlib.cornell.edu/ns/vitro/public#>)
+
+
+Ontology(<http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua>
+Annotation(dcterms:creator <https://orcid.org/0000-0003-4325-5751>)
+Annotation(dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/deed.en>)
+Annotation(dcterms:title "VIVO Core Extension for BUA"@en)
+Annotation(dcterms:title "VIVO Core-Erweiterung für BUA"@de)
+Annotation(vitro:ontologyPrefixAnnot "vivo-bua"^^xsd:string)
+Annotation(rdfs:label "VIVO Core-Erweiterung für BUA"@de)
+
+Declaration(Class(obo:ERO_0000071))
+Declaration(Class(bibo:Document))
+Declaration(Class(:Arbeitsbereich))
+Declaration(Class(:Arbeitsgruppe))
+Declaration(Class(:Artefakt))
+Declaration(Class(:Artifakt))
+Declaration(Class(:ContributionInEditedVolume))
+Declaration(Class(:Corpus))
+Declaration(Class(:EditedVolume))
+Declaration(Class(:Exzellenzcluster))
+Declaration(Class(:Exzellenzinitiativcluster))
+Declaration(Class(:Exzellenzstrategiecluster))
+Declaration(Class(:FabricConstruction))
+Declaration(Class(:Fachbereich))
+Declaration(Class(:Fachgebiet))
+Declaration(Class(:Fachgruppe))
+Declaration(Class(:Forschungszentrum))
+Declaration(Class(:Furniture))
+Declaration(Class(:Graduiertenprogramm))
+Declaration(Class(:Gremium))
+Declaration(Class(:Integrativeforschungsinstitut))
+Declaration(Class(:Interdisziplinaereeinrichtung))
+Declaration(Class(:Interdisziplinaerezentrum))
+Declaration(Class(:Klinik))
+Declaration(Class(:Kompetenzzentrum))
+Declaration(Class(:Monograph))
+Declaration(Class(:MultimediaCorpus))
+Declaration(Class(:Professur))
+Declaration(Class(:SoftwareLibrary))
+Declaration(Class(:SoftwarePublication))
+Declaration(Class(:SoftwareTool))
+Declaration(Class(:SonstigeForschungseinrichtung))
+Declaration(Class(:SpokenCorpus))
+Declaration(Class(:TextCorpus))
+Declaration(Class(:Treatise))
+Declaration(Class(:WorkOfArt))
+Declaration(Class(:ZentraleForschungseinrichtung))
+Declaration(Class(:Zentraledienstleister))
+Declaration(Class(:Zentralinstitut))
+Declaration(Class(:forschungsallianz))
+Declaration(Class(vivo:AcademicDepartment))
+Declaration(Class(vivo:AcademicUnit))
+Declaration(Class(vivo:Center))
+Declaration(Class(vivo:ClinicalOrganization))
+Declaration(Class(vivo:Committee))
+Declaration(Class(vivo:Department))
+Declaration(Class(vivo:Institute))
+Declaration(Class(vivo:Program))
+Declaration(Class(vivo:ResearchOrganization))
+Declaration(Class(vivo-de:ServiceUnit))
+Declaration(Class(foaf:Group))
+Declaration(Class(foaf:Organization))
+Declaration(Class(foaf:ResearchOrganization))
+Declaration(ObjectProperty(:ressource))
+Declaration(ObjectProperty(:ressource_fuer))
+Declaration(AnnotationProperty(obo:IAO_0000112))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(dcterms:creator))
+Declaration(AnnotationProperty(dcterms:license))
+Declaration(AnnotationProperty(dcterms:title))
+Declaration(AnnotationProperty(vitro:displayLimitAnnot))
+Declaration(AnnotationProperty(vitro:displayRankAnnot))
+Declaration(AnnotationProperty(vitro:hiddenFromDisplayBelowRoleLevelAnnot))
+Declaration(AnnotationProperty(vitro:hiddenFromPublishBelowRoleLevelAnnot))
+Declaration(AnnotationProperty(vitro:inClassGroup))
+Declaration(AnnotationProperty(vitro:inPropertyGroupAnnot))
+Declaration(AnnotationProperty(vitro:ontologyPrefixAnnot))
+Declaration(AnnotationProperty(vitro:prohibitedFromUpdateBelowRoleLevelAnnot))
+Declaration(AnnotationProperty(vitro:selectFromExistingAnnot))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :ressource (ressource)
+
+AnnotationAssertion(vitro:inPropertyGroupAnnot :ressource <http://vivoweb.org/ontology#vitroPropertyGroupoverview>)
+AnnotationAssertion(vitro:selectFromExistingAnnot :ressource "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:label :ressource "resource"@en-us)
+AnnotationAssertion(rdfs:label :ressource "ressource"@de-de)
+SubObjectPropertyOf(:ressource owl:topObjectProperty)
+InverseObjectProperties(:ressource :ressource_fuer)
+ObjectPropertyDomain(:ressource foaf:Organization)
+ObjectPropertyRange(:ressource bibo:Document)
+
+# Object Property: :ressource_fuer (resource for)
+
+AnnotationAssertion(vitro:inPropertyGroupAnnot :ressource_fuer <http://vivoweb.org/ontology#vitroPropertyGroupoverview>)
+AnnotationAssertion(vitro:selectFromExistingAnnot :ressource_fuer "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:label :ressource_fuer "resource for"@en-us)
+AnnotationAssertion(rdfs:label :ressource_fuer "ressource füer"@de-de)
+SubObjectPropertyOf(:ressource_fuer owl:topObjectProperty)
+ObjectPropertyDomain(:ressource_fuer bibo:Document)
+ObjectPropertyRange(:ressource_fuer foaf:Organization)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Arbeitsbereich (Arbeitsbereich)
+
+AnnotationAssertion(obo:IAO_0000112 :Arbeitsbereich "Arbeitsbereich Kinderzahnmedizin"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Arbeitsbereich "Fachspezifische Forschungs-
+            und Verwaltungseinheit einer Hochschuleinrichtung"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Arbeitsbereich "Subject-specific research and
+            Research and administrative unit of a higher education institution"^^xsd:string)
+AnnotationAssertion(rdfs:label :Arbeitsbereich "Arbeitsbereich"@de-de)
+AnnotationAssertion(rdfs:label :Arbeitsbereich "Division"@en-us)
+SubClassOf(:Arbeitsbereich vivo:Department)
+SubClassOf(:Arbeitsbereich foaf:Organization)
+
+# Class: :Arbeitsgruppe (Research group)
+
+AnnotationAssertion(obo:IAO_0000112 :Arbeitsgruppe "Arbeitsgruppe Festkörpernanoskopie"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Arbeitsgruppe "Fachspezifische Forschungseinheit einer Hochschuleinrichtung"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Arbeitsgruppe "Subject-specific research unit of a higher education institution"^^xsd:string)
+AnnotationAssertion(rdfs:label :Arbeitsgruppe "Arbeitsgruppe"@de-de)
+AnnotationAssertion(rdfs:label :Arbeitsgruppe "Research group"@en-us)
+SubClassOf(:Arbeitsgruppe vivo:AcademicUnit)
+SubClassOf(:Arbeitsgruppe foaf:Organization)
+
+# Class: :Artefakt (Artefakt)
+
+AnnotationAssertion(obo:IAO_0000112 :Artefakt "Byzantinisches Tongefäß"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Artefakt "An object made or shaped by human hand or labor,  or shaped by some agent or intelligence, not necessarily of direct human origin. Something viewed as a product of human or other  agency or conception rather than an inherent element."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Artefakt "Ein Objekt, das von menschlicher Hand oder Arbeit hergestellt oder geformt wurde oder von einem Agenten oder einer Intelligenz geformt wurde, das nicht unbedingt direkten menschlichen Ursprungs ist. Etwas, das eher als Produkt menschlichen oder anderen Handelns oder Konzepts als als inhärentes Element angesehen wird."^^xsd:string)
+AnnotationAssertion(rdfs:label :Artefakt "Artefakt"@de-de)
+AnnotationAssertion(rdfs:label :Artefakt "Artifact"@en-us)
+SubClassOf(:Artefakt owl:Thing)
+
+# Class: :ContributionInEditedVolume (Contribution in Edited volume)
+
+AnnotationAssertion(obo:IAO_0000112 :ContributionInEditedVolume "Artikel im Tagungsband"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :ContributionInEditedVolume "Anteil Eines Sammelwerks"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :ContributionInEditedVolume "Contribution in Edited Volume"^^xsd:string)
+AnnotationAssertion(rdfs:label :ContributionInEditedVolume "Beitrag eines Sammelwerks"@de-de)
+AnnotationAssertion(rdfs:label :ContributionInEditedVolume "Contribution in Edited volume"@en-us)
+SubClassOf(:ContributionInEditedVolume bibo:Document)
+
+# Class: :Corpus (Corpus)
+
+AnnotationAssertion(obo:IAO_0000112 :Corpus "Corpus"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Corpus "Collection of different artifacts used in linguistic context"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Corpus "Sammlung vershciedene artifakte in Lingquistische kontext benutzt"^^xsd:string)
+AnnotationAssertion(rdfs:label :Corpus "Corpus"@en-us)
+AnnotationAssertion(rdfs:label :Corpus "Korpus"@de-de)
+SubClassOf(:Corpus bibo:Document)
+
+# Class: :EditedVolume (Edited volume)
+
+AnnotationAssertion(obo:IAO_0000112 :EditedVolume "Festschrift"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :EditedVolume "Edited Volume"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :EditedVolume "Eine Sammelwerk"^^xsd:string)
+AnnotationAssertion(rdfs:label :EditedVolume "Edited volume"@en-us)
+AnnotationAssertion(rdfs:label :EditedVolume "Sammelwerk"@de-de)
+SubClassOf(:EditedVolume bibo:Document)
+
+# Class: :Exzellenzcluster (Exzellenzcluster)
+
+AnnotationAssertion(obo:IAO_0000112 :Exzellenzcluster "Matters of Activity: Image Space Material"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Exzellenzcluster "Spitzenforschungsorganisation einer Universität"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Exzellenzcluster "Top research organisation of a university"^^xsd:string)
+AnnotationAssertion(rdfs:label :Exzellenzcluster "Cluster of Excellence"@en-us)
+AnnotationAssertion(rdfs:label :Exzellenzcluster "Exzellenzcluster"@de-de)
+SubClassOf(:Exzellenzcluster foaf:Organization)
+SubClassOf(:Exzellenzcluster foaf:ResearchOrganization)
+
+# Class: :Exzellenzinitiativcluster (Cluster within the framework of an Excellence Initiative)
+
+AnnotationAssertion(obo:IAO_0000112 :Exzellenzinitiativcluster "Neurocure"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Exzellenzinitiativcluster "Mit er Exzellenzinitiative verfolgte damit das Ziel, die deutsche Forschungslandschaft und vor allem die Universitäten im internationalen Vergleich zu stärken und „Leuchttürme von internationaler Strahlkraft“ zu schaffen."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Exzellenzinitiativcluster "The aim of the Excellence Initiative was to strengthen the German research landscape, especially the universities, in international comparison and to create \"lighthouses with international appeal\""^^xsd:string)
+AnnotationAssertion(rdfs:label :Exzellenzinitiativcluster "Cluster im Rahmen der Exzellenzinitiative"@de-de)
+AnnotationAssertion(rdfs:label :Exzellenzinitiativcluster "Cluster within the framework of an Excellence Initiative"@en-us)
+SubClassOf(:Exzellenzinitiativcluster :Exzellenzcluster)
+SubClassOf(:Exzellenzinitiativcluster foaf:Organization)
+
+# Class: :Exzellenzstrategiecluster (Cluster within the framework of an Excellence Strategy)
+
+AnnotationAssertion(obo:IAO_0000112 :Exzellenzstrategiecluster "Matters of Activity: Image Space Material"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Exzellenzstrategiecluster "Mit der Exzellenzstrategie sollen herausragende Forschungsprojekte an den Hochschulen gestärkt und ihre Sichtbarkeit im internationalen Vergleich erhöht werden."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Exzellenzstrategiecluster "The Excellence Strategy aims to strengthen outstanding research projects at universities and increase their visibility in international comparison."^^xsd:string)
+AnnotationAssertion(rdfs:label :Exzellenzstrategiecluster "Cluster im Rahmen der Exzellenzstrategie"@de-de)
+AnnotationAssertion(rdfs:label :Exzellenzstrategiecluster "Cluster within the framework of an Excellence Strategy"@en-us)
+SubClassOf(:Exzellenzstrategiecluster :Exzellenzcluster)
+SubClassOf(:Exzellenzstrategiecluster foaf:Organization)
+
+# Class: :FabricConstruction (Fabric Construction)
+
+AnnotationAssertion(obo:IAO_0000112 :FabricConstruction "Wandteppich"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :FabricConstruction "A Fabric Construction, woven, knitted or otherwise constructed"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :FabricConstruction "Eine Stoffkonstruktion, gewebt, gestrickt oder auf andere Weise hergestellt"^^xsd:string)
+AnnotationAssertion(rdfs:label :FabricConstruction "Fabric Construction"@en-us)
+AnnotationAssertion(rdfs:label :FabricConstruction "Stoffkonstruktion"@de-de)
+SubClassOf(:FabricConstruction :Artifakt)
+
+# Class: :Fachbereich (Fachbereich)
+
+AnnotationAssertion(obo:IAO_0000112 :Fachbereich "Fachbereich Wirtschaftswissenschaft"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Fachbereich "Fachspezifische Forschungs-
+            und Verwaltungseinheit einer Hochschuleinrichtung"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Fachbereich "Subject-specific research unit of a higher education institution"^^xsd:string)
+AnnotationAssertion(rdfs:label :Fachbereich "Fachbereich"@de-de)
+AnnotationAssertion(rdfs:label :Fachbereich "Subject Area"@en-us)
+SubClassOf(:Fachbereich foaf:Organization)
+
+# Class: :Fachgebiet (Fachgebiet)
+
+AnnotationAssertion(obo:IAO_0000112 :Fachgebiet "Theoretische Philosophie"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Fachgebiet "Fachgebiet einer Hochschuleinrichtung"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Fachgebiet "Subject area of a university"^^xsd:string)
+AnnotationAssertion(rdfs:label :Fachgebiet "Fachgebiet"@de-de)
+AnnotationAssertion(rdfs:label :Fachgebiet "Subject Domain"@en-us)
+SubClassOf(:Fachgebiet foaf:Organization)
+
+# Class: :Fachgruppe (Research Unit)
+
+AnnotationAssertion(obo:IAO_0000112 :Fachgruppe "Fachgruppe Diskrete Mathematik"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Fachgruppe "Fachspezifische Forschungs-
+            und Verwaltungseinheit einer Hochschuleinrichtung"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Fachgruppe "Subject-specific research and
+            Research and administrative unit of a higher education institution"^^xsd:string)
+AnnotationAssertion(rdfs:label :Fachgruppe "Fachgruppe"@de-de)
+AnnotationAssertion(rdfs:label :Fachgruppe "Research Unit"@en-us)
+SubClassOf(:Fachgruppe foaf:Organization)
+
+# Class: :Forschungszentrum (Forschungszentrum)
+
+AnnotationAssertion(obo:IAO_0000112 :Forschungszentrum "Forschungszentrum für Herz-Kreislauf    "^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Forschungszentrum "Forschungszentrum einer Hochschuleinrichtung"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Forschungszentrum "Research centre of a university"^^xsd:string)
+AnnotationAssertion(rdfs:label :Forschungszentrum "Forschungszentrum"@de-de)
+AnnotationAssertion(rdfs:label :Forschungszentrum "Research Center"@en-us)
+SubClassOf(:Forschungszentrum vivo:Center)
+SubClassOf(:Forschungszentrum foaf:Organization)
+
+# Class: :Furniture (Furniture)
+
+AnnotationAssertion(obo:IAO_0000112 :Furniture "Armstuhl"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Furniture "A Piece of Furniture"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Furniture "Ein Möbelstuck"^^xsd:string)
+AnnotationAssertion(rdfs:label :Furniture "Furniture"@en-us)
+AnnotationAssertion(rdfs:label :Furniture "Möbel"@de-de)
+SubClassOf(:Furniture :Artifakt)
+
+# Class: :Graduiertenprogramm (Graduiertenprogramm)
+
+AnnotationAssertion(obo:IAO_0000112 :Graduiertenprogramm "IRI für Lebenswissenschaften"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Graduiertenprogramm "Expert groups at a university"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Graduiertenprogramm "Expertengruppen einer Hochschuleinrichtung"^^xsd:string)
+AnnotationAssertion(rdfs:label :Graduiertenprogramm "Graduate program"@en-us)
+AnnotationAssertion(rdfs:label :Graduiertenprogramm "Graduiertenprogramm"@de-de)
+SubClassOf(:Graduiertenprogramm vivo:Program)
+
+# Class: :Gremium (Committee)
+
+AnnotationAssertion(obo:IAO_0000112 :Gremium "IRI für Lebenswissenschaften"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Gremium "Committee at a university"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Gremium "Gremium einer Hochschuleinrichtung"^^xsd:string)
+AnnotationAssertion(rdfs:label :Gremium "Committee"@en-us)
+AnnotationAssertion(rdfs:label :Gremium "Gremium"@de-de)
+SubClassOf(:Gremium vivo:Committee)
+SubClassOf(:Gremium foaf:Group)
+SubClassOf(:Gremium foaf:Organization)
+
+# Class: :Integrativeforschungsinstitut (Integrative research institute)
+
+AnnotationAssertion(obo:IAO_0000112 :Integrativeforschungsinstitut "IRI für Lebenswissenschaften"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Integrativeforschungsinstitut "Die Integrativen Forschungsinstitute (IRI) ermöglichen herausragenden Wissenschaftlerinnen und Wissenschaftlern, ein Forschungsfeld gemeinsam interdisziplinär zu bearbeiten und fortzuentwickeln"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Integrativeforschungsinstitut "The Integrative Research Institutes (IRI) enable outstanding scientists to work together on a research field in an interdisciplinary manner and to develop it further."^^xsd:string)
+AnnotationAssertion(rdfs:label :Integrativeforschungsinstitut "Integrative Forschungsinstitut"@de-de)
+AnnotationAssertion(rdfs:label :Integrativeforschungsinstitut "Integrative research institute"@en-us)
+SubClassOf(:Integrativeforschungsinstitut vivo:Institute)
+SubClassOf(:Integrativeforschungsinstitut vivo:ResearchOrganization)
+SubClassOf(:Integrativeforschungsinstitut foaf:Organization)
+
+# Class: :Interdisziplinaereeinrichtung (Interdisciplinary facility)
+
+AnnotationAssertion(obo:IAO_0000112 :Interdisziplinaereeinrichtung "Zentrum für Biophysik und Bioinformatik"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Interdisziplinaereeinrichtung "Fächer und Schulstufen übergreifende universitäre Struktureinheit"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Interdisziplinaereeinrichtung "University structural unit spanning subjects and school levels"^^xsd:string)
+AnnotationAssertion(rdfs:label :Interdisziplinaereeinrichtung "Interdisciplinary facility"@en-us)
+AnnotationAssertion(rdfs:label :Interdisziplinaereeinrichtung "Interdisziplinäre Einrichtung"@de-de)
+SubClassOf(:Interdisziplinaereeinrichtung vivo-de:ServiceUnit)
+SubClassOf(:Interdisziplinaereeinrichtung foaf:Organization)
+
+# Class: :Interdisziplinaerezentrum (Interdisziplinäre Zentrum)
+
+AnnotationAssertion(obo:IAO_0000112 :Interdisziplinaerezentrum "Zentrum für Biophysik und Bioinformatik"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Interdisziplinaerezentrum "Center spanning subjects and school levels"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Interdisziplinaerezentrum "Fächer- und schulstufenübergreifendes Zentrum"^^xsd:string)
+AnnotationAssertion(rdfs:label :Interdisziplinaerezentrum "Interdisciplinary center"@en-us)
+AnnotationAssertion(rdfs:label :Interdisziplinaerezentrum "Interdisziplinäre Zentrum"@de-de)
+SubClassOf(:Interdisziplinaerezentrum vivo:Center)
+SubClassOf(:Interdisziplinaerezentrum vivo:ResearchOrganization)
+SubClassOf(:Interdisziplinaerezentrum foaf:Organization)
+
+# Class: :Klinik (Klinik)
+
+AnnotationAssertion(obo:IAO_0000112 :Klinik "Chirurgische Klinik"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Klinik "Klinik einer Hochschuleinrichtung oder Krankenhaus"^^xsd:string)
+AnnotationAssertion(rdfs:label :Klinik "Clinic"@en-us)
+AnnotationAssertion(rdfs:label :Klinik "Klinik"@de-de)
+SubClassOf(:Klinik vivo:ClinicalOrganization)
+SubClassOf(:Klinik foaf:Organization)
+
+# Class: :Kompetenzzentrum (Kompetenzzentrum)
+
+AnnotationAssertion(obo:IAO_0000112 :Kompetenzzentrum "Kompetenzzentrum für Thoraxchirurgie"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Kompetenzzentrum "Kompetenzzentrum einer Hochschuleinrichtung"^^xsd:string)
+AnnotationAssertion(rdfs:label :Kompetenzzentrum "Competence center"@en-us)
+AnnotationAssertion(rdfs:label :Kompetenzzentrum "Kompetenzzentrum"@de-de)
+SubClassOf(:Kompetenzzentrum vivo:Center)
+SubClassOf(:Kompetenzzentrum foaf:Organization)
+
+# Class: :Monograph (Monographie)
+
+AnnotationAssertion(obo:IAO_0000112 :Monograph "Die Leiden des Jungen Werther, ein Buch über die Darstellung der Figur Werther in Goethes"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Monograph "A monograph is a treatise on a specialized topic"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Monograph "Eine Monographie ist eine Abhandlung zu einem bestimmten Thema"^^xsd:string)
+AnnotationAssertion(rdfs:label :Monograph "Monograph"@en-us)
+AnnotationAssertion(rdfs:label :Monograph "Monographie"@de-de)
+SubClassOf(:Monograph :Treatise)
+
+# Class: :MultimediaCorpus (Mutlimedia Corpus)
+
+AnnotationAssertion(obo:IAO_0000112 :MultimediaCorpus "Multimedia Corpus"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :MultimediaCorpus "Collection of multiple media used in linguistic context"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :MultimediaCorpus "Sammlung mehrere Medien in Lingquistische kontext benutzt"^^xsd:string)
+AnnotationAssertion(rdfs:label :MultimediaCorpus "Multimediale Korpus"@de-de)
+AnnotationAssertion(rdfs:label :MultimediaCorpus "Mutlimedia Corpus"@en-us)
+SubClassOf(:MultimediaCorpus :Corpus)
+
+# Class: :Professur (Professors Unit)
+
+AnnotationAssertion(obo:IAO_0000112 :Professur "Professur Mittellatein"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Professur "Fachspezifische Forschungs-
+            und Verwaltungseinheit einer Hochschuleinrichtung"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Professur "Subject-specific research and
+            Research and administrative unit of a higher education institution"^^xsd:string)
+AnnotationAssertion(rdfs:label :Professur "Professors Unit"@en-us)
+AnnotationAssertion(rdfs:label :Professur "Professur"@de-de)
+SubClassOf(:Professur foaf:Organization)
+
+# Class: :SoftwareLibrary (Softwarebibliothek)
+
+AnnotationAssertion(obo:IAO_0000112 :SoftwareLibrary "Pepper - A highly extensible plattform for conversion and manipulation of linguistic data between an unbound set of formats"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :SoftwareLibrary "Software library for research"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :SoftwareLibrary "Softwarebibliothek für die Forschung"^^xsd:string)
+AnnotationAssertion(rdfs:label :SoftwareLibrary "Software library"@en-us)
+AnnotationAssertion(rdfs:label :SoftwareLibrary "Softwarebibliothek"@de-de)
+SubClassOf(:SoftwareLibrary obo:ERO_0000071)
+
+# Class: :SoftwarePublication (Software publication)
+
+AnnotationAssertion(obo:IAO_0000112 :SoftwarePublication "Die Leiden des Jungen Werther, ein Buch über die Darstellung der Figur Werther in Goethes"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :SoftwarePublication "Eine veröffentlichung von Software"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :SoftwarePublication "Publication of Software"^^xsd:string)
+AnnotationAssertion(rdfs:label :SoftwarePublication "Software publication"@en-us)
+AnnotationAssertion(rdfs:label :SoftwarePublication "Softwareveröffentlichung"@de-de)
+SubClassOf(:SoftwarePublication obo:ERO_0000071)
+
+# Class: :SoftwareTool (Software tool)
+
+AnnotationAssertion(obo:IAO_0000112 :SoftwareTool "VIVO - Connect, Share, Discover"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :SoftwareTool "Software tool for research"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :SoftwareTool "Softwaretool für die Forschung"^^xsd:string)
+AnnotationAssertion(rdfs:label :SoftwareTool "Software tool"@en-us)
+AnnotationAssertion(rdfs:label :SoftwareTool "Software-Tool"@de-de)
+SubClassOf(:SoftwareTool obo:ERO_0000071)
+
+# Class: :SonstigeForschungseinrichtung (Other Research institution)
+
+AnnotationAssertion(obo:IAO_0000112 :SonstigeForschungseinrichtung "Forschungszentrum Wissenschaftliche Werkstätten"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :SonstigeForschungseinrichtung "Forschungseinrichtung einer Hochschuleinrichtung"^^xsd:string)
+AnnotationAssertion(rdfs:label :SonstigeForschungseinrichtung "Other Research institution"@en-us)
+AnnotationAssertion(rdfs:label :SonstigeForschungseinrichtung "Sonstige Forschungseinrichtung"@de-de)
+SubClassOf(:SonstigeForschungseinrichtung :Forschungszentrum)
+SubClassOf(:SonstigeForschungseinrichtung foaf:Organization)
+
+# Class: :SpokenCorpus (Spoken Corpus)
+
+AnnotationAssertion(obo:IAO_0000112 :SpokenCorpus "Spoken Corpus"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :SpokenCorpus "Collection of different audio recordings used in linguistic context"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :SpokenCorpus "Sammlung vershciedene audioaufnamen in Lingquistische kontext benutzt"^^xsd:string)
+AnnotationAssertion(rdfs:label :SpokenCorpus "Gesprochener Korpus"@de-de)
+AnnotationAssertion(rdfs:label :SpokenCorpus "Spoken Corpus"@en-us)
+SubClassOf(:SpokenCorpus :Corpus)
+
+# Class: :TextCorpus (Textkorpus)
+
+AnnotationAssertion(obo:IAO_0000112 :TextCorpus "Text Corpus"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :TextCorpus "Collection of different texts used in linguistic context"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :TextCorpus "Sammlung vershciedene texte in Lingquistische kontext benutzt"^^xsd:string)
+AnnotationAssertion(rdfs:label :TextCorpus "Text Corpus"@en-us)
+AnnotationAssertion(rdfs:label :TextCorpus "Textkorpus"@de-de)
+SubClassOf(:TextCorpus :Corpus)
+
+# Class: :Treatise (Treatise)
+
+AnnotationAssertion(obo:IAO_0000112 :Treatise "David Hume: Ein Traktat über die menschliche Natur"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Treatise "A treatise is a formal and systematic written discourse on some subject, generally longer and treating it in greater depth than an essay, and more concerned with investigating or exposing the principles of the subject and its conclusions"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Treatise "Ein Traktat ist ein formaler und systematischer schriftlicher Diskurs zu einem bestimmten Thema, der im Allgemeinen länger ist und ihn eingehender behandelt als ein Essay und sich mehr mit der Untersuchung oder Aufdeckung der Prinzipien des Themas und seiner Schlussfolgerungen befasst"^^xsd:string)
+AnnotationAssertion(rdfs:label :Treatise "Traktat"@de-de)
+AnnotationAssertion(rdfs:label :Treatise "Treatise"@en-us)
+SubClassOf(:Treatise bibo:Document)
+
+# Class: :WorkOfArt (Work Of Art)
+
+AnnotationAssertion(obo:IAO_0000112 :WorkOfArt "Schauspiel"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :WorkOfArt "A work of art"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :WorkOfArt "Ein Kunstwerk"^^xsd:string)
+AnnotationAssertion(rdfs:label :WorkOfArt "Kunstwerk"@de-de)
+AnnotationAssertion(rdfs:label :WorkOfArt "Work Of Art"@en-us)
+SubClassOf(:WorkOfArt :Artifakt)
+
+# Class: :ZentraleForschungseinrichtung (Zentrale Forschungseinrichtung)
+
+AnnotationAssertion(obo:IAO_0000112 :ZentraleForschungseinrichtung "Zentrale wissenschaftliche Einrichtungen dienen der Durchführung von Forschung, Lehre und Studium. Sie sind rechtlich unselbständige Einheiten der Universität, denen für die Durchführung der Aufgaben der Universität Personal, Sachmittel und Räume zur Verfügung gestellt werden"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :ZentraleForschungseinrichtung "Generische Klasse für
+            eine Zentrale ForscungsEinrichtung mit institutsübergreifenden Aufgaben"^^xsd:string)
+AnnotationAssertion(rdfs:label :ZentraleForschungseinrichtung "Central research facility"@en-us)
+AnnotationAssertion(rdfs:label :ZentraleForschungseinrichtung "Zentrale Forschungseinrichtung"@de-de)
+SubClassOf(:ZentraleForschungseinrichtung foaf:Organization)
+
+# Class: :Zentraledienstleister (Zentrale Dienstleister)
+
+AnnotationAssertion(obo:IAO_0000112 :Zentraledienstleister "Notfall- und Akutmedizin an der Charité"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Zentraledienstleister "Zentrale Dienstleister einer Hochschuleinrichtung."^^xsd:string)
+AnnotationAssertion(rdfs:label :Zentraledienstleister "Central service provider"@en-us)
+AnnotationAssertion(rdfs:label :Zentraledienstleister "Zentrale Dienstleister"@de-de)
+SubClassOf(:Zentraledienstleister foaf:Organization)
+
+# Class: :Zentralinstitut (Zentralinstitut)
+
+AnnotationAssertion(obo:IAO_0000112 :Zentralinstitut "Großbritannien-Zentrum"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Zentralinstitut "Zentrale institute einer Hochschuleinrichtung."^^xsd:string)
+AnnotationAssertion(rdfs:label :Zentralinstitut "Central Institute"@en-us)
+AnnotationAssertion(rdfs:label :Zentralinstitut "Zentralinstitut"@de-de)
+SubClassOf(:Zentralinstitut vivo:Institute)
+SubClassOf(:Zentralinstitut foaf:Organization)
+
+# Class: :forschungsallianz (Alliance for innovative Research and Education)
+
+AnnotationAssertion(obo:IAO_0000112 :forschungsallianz "Berlin University Alliance"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :forschungsallianz "Allianz für innovative Forschung und Lehre einer Hochschuleinrichtung"^^xsd:string)
+AnnotationAssertion(rdfs:label :forschungsallianz "Alliance for innovative Research and Education"@en-us)
+AnnotationAssertion(rdfs:label :forschungsallianz "Allianz für innovative Forschung und Lehre"@de-de)
+SubClassOf(:forschungsallianz vivo:Department)
+SubClassOf(:forschungsallianz foaf:Organization)
+
+
+)

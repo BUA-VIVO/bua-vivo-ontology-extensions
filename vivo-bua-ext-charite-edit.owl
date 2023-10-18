@@ -1,0 +1,105 @@
+Prefix(:=<http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/char#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(hr:=<http://vivo.cornell.edu/ns/hr/0.9/hr.owl#>)
+Prefix(ns:=<http://www.w3.org/2003/06/sw-vocab-status/ns#>)
+Prefix(dct:=<http://purl.org/dc/terms/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(bibo:=<http://purl.org/ontology/bibo/>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(owl2:=<http://www.w3.org/2006/12/owl2-xml#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(vivo:=<http://vivoweb.org/ontology/core#>)
+Prefix(vitro:=<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>)
+Prefix(vivoc:=<http://vivo.library.cornell.edu/ns/0.1#>)
+Prefix(dcterms:=<http://purl.org/dc/terms/>)
+Prefix(vivo-de:=<http://vivoweb.org/ontology/core/de#>)
+Prefix(vitro-public:=<http://vitro.mannlib.cornell.edu/ns/vitro/public#>)
+
+
+Ontology(<http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/char#>
+Annotation(dcterms:creator <https://orcid.org/0000-0003-4325-5751>)
+Annotation(dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/deed.en>)
+Annotation(dcterms:title "VIVO Core Extension für BUA - Charité Universitätzmedizin Berlin"@en)
+Annotation(dcterms:title "VIVO Core-Erweiterung für BUA - Charité Universitätzmedizin Berlin"@de)
+Annotation(vitro:ontologyPrefixAnnot "vivo-bua-char")
+Annotation(rdfs:label "VIVO Core Extension für BUA - Charité Universitätzmedizin Berlin"@de)
+
+Declaration(Class(:Forschungsbereich))
+Declaration(Class(:Forschungsnetzwerk))
+Declaration(Class(:Forschungsschwerpunkt))
+Declaration(Class(:Projektbereich))
+Declaration(Class(:Universitaetsklinik))
+Declaration(Class(:Zentralregister))
+Declaration(Class(foaf:Organization))
+Declaration(AnnotationProperty(obo:IAO_0000112))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(dcterms:creator))
+Declaration(AnnotationProperty(dcterms:license))
+Declaration(AnnotationProperty(dcterms:title))
+Declaration(AnnotationProperty(vitro:ontologyPrefixAnnot))
+
+
+############################
+#   Classes
+############################
+
+# Class: :Forschungsbereich (Research area)
+
+AnnotationAssertion(obo:IAO_0000112 :Forschungsbereich "Forschungsbereich Geschlecht und Diversität")
+AnnotationAssertion(obo:IAO_0000115 :Forschungsbereich "Forschungsbereich einer Hochschuleinrichtung")
+AnnotationAssertion(obo:IAO_0000115 :Forschungsbereich "Research area of a higher education institution")
+AnnotationAssertion(rdfs:label :Forschungsbereich "Forschungsbereich"@de-de)
+AnnotationAssertion(rdfs:label :Forschungsbereich "Research area"@en-us)
+SubClassOf(:Forschungsbereich foaf:Organization)
+
+# Class: :Forschungsnetzwerk (Research Association)
+
+AnnotationAssertion(obo:IAO_0000112 :Forschungsnetzwerk "Forschungsverbund Osteoarthrose")
+AnnotationAssertion(obo:IAO_0000115 :Forschungsnetzwerk "Interdisciplinary research network of a higher education institution")
+AnnotationAssertion(obo:IAO_0000115 :Forschungsnetzwerk "Interdisciplinäre Forschungsnetzwerk einer Hochschuleinrichtung")
+AnnotationAssertion(rdfs:label :Forschungsnetzwerk "Forschungsnetzwerk"@de-de)
+AnnotationAssertion(rdfs:label :Forschungsnetzwerk "Research Association"@en-us)
+SubClassOf(:Forschungsnetzwerk foaf:Organization)
+
+# Class: :Forschungsschwerpunkt (Research focus)
+
+AnnotationAssertion(obo:IAO_0000112 :Forschungsschwerpunkt "Forschungsschwerpunkt Nierenepidemiologie")
+AnnotationAssertion(obo:IAO_0000115 :Forschungsschwerpunkt "Fachspezifische Forschungsschwerpunkt einer Hochschuleinrichtung")
+AnnotationAssertion(obo:IAO_0000115 :Forschungsschwerpunkt "Subject-specific research focus of a higher education institution")
+AnnotationAssertion(rdfs:label :Forschungsschwerpunkt "Forschungsschwerpunkt"@de-de)
+AnnotationAssertion(rdfs:label :Forschungsschwerpunkt "Research focus"@en-us)
+SubClassOf(:Forschungsschwerpunkt foaf:Organization)
+
+# Class: :Projektbereich (Projektbereich)
+
+AnnotationAssertion(obo:IAO_0000112 :Projektbereich "Projektbereich Epidemiologie und Prävention")
+AnnotationAssertion(obo:IAO_0000115 :Projektbereich "Fachspezifischer Forschungsschwerpunkt und Teilbereich innerhalb eines größeren Projekts einer Hochschuleinrichtunginrichtung")
+AnnotationAssertion(obo:IAO_0000115 :Projektbereich "Subject-specific research focus of a higher education institution")
+AnnotationAssertion(rdfs:label :Projektbereich "Project area"@en-us)
+AnnotationAssertion(rdfs:label :Projektbereich "Projektbereich"@de-de)
+SubClassOf(:Projektbereich foaf:Organization)
+
+# Class: :Universitaetsklinik (University hospital)
+
+AnnotationAssertion(obo:IAO_0000112 :Universitaetsklinik "Charité Universitätsklinikum - Campus Benjamin Franklin")
+AnnotationAssertion(obo:IAO_0000115 :Universitaetsklinik "Medical clinic of a university")
+AnnotationAssertion(obo:IAO_0000115 :Universitaetsklinik "Medizinische Klinik einer Hochschuleinrichtung")
+AnnotationAssertion(rdfs:label :Universitaetsklinik "University hospital"@en-us)
+AnnotationAssertion(rdfs:label :Universitaetsklinik "Universitätsklinik"@de-de)
+SubClassOf(:Universitaetsklinik foaf:Organization)
+
+# Class: :Zentralregister (Zentralregister)
+
+AnnotationAssertion(obo:IAO_0000112 :Zentralregister "Das deutsche Zentralregister für kindliche Hörstörungen")
+AnnotationAssertion(obo:IAO_0000115 :Zentralregister "Central register, supported by a research network")
+AnnotationAssertion(obo:IAO_0000115 :Zentralregister "Zentrales Register, unterstützt durch ein Forschungsnetzwerk")
+AnnotationAssertion(rdfs:label :Zentralregister "Central register"@en-us)
+AnnotationAssertion(rdfs:label :Zentralregister "Zentralregister"@de-de)
+SubClassOf(:Zentralregister foaf:Organization)
+
+
+)

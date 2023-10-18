@@ -1,0 +1,86 @@
+Prefix(:=<http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/fub#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(hr:=<http://vivo.cornell.edu/ns/hr/0.9/hr.owl#>)
+Prefix(ns:=<http://www.w3.org/2003/06/sw-vocab-status/ns#>)
+Prefix(dct:=<http://purl.org/dc/terms/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(bibo:=<http://purl.org/ontology/bibo/>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(owl2:=<http://www.w3.org/2006/12/owl2-xml#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(vivo:=<http://vivoweb.org/ontology/core#>)
+Prefix(vitro:=<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>)
+Prefix(vivoc:=<http://vivo.library.cornell.edu/ns/0.1#>)
+Prefix(dcterms:=<http://purl.org/dc/terms/>)
+Prefix(vivo-de:=<http://vivoweb.org/ontology/core/de#>)
+Prefix(vitro-public:=<http://vitro.mannlib.cornell.edu/ns/vitro/public#>)
+
+
+Ontology(<http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/fub#>
+Annotation(dcterms:creator <https://orcid.org/0000-0003-4325-5751>)
+Annotation(dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/deed.en>)
+Annotation(dcterms:title "VIVO Core Extension für BUA - Freie Universität"@en)
+Annotation(dcterms:title "VIVO Core-Erweiterung für BUA - Freie Universität"@de)
+Annotation(vitro:ontologyPrefixAnnot "vivo-bua-fub"^^xsd:string)
+Annotation(rdfs:label "VIVO Core Extension für BUA - Freie Universität"@de)
+
+Declaration(Class(:Abteilung))
+Declaration(Class(:Professur))
+Declaration(Class(:Seminar))
+Declaration(Class(:Wissenschaftsbereich))
+Declaration(Class(vivo:AcademicDepartment))
+Declaration(Class(foaf:Organization))
+Declaration(AnnotationProperty(obo:IAO_0000112))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(dcterms:creator))
+Declaration(AnnotationProperty(dcterms:license))
+Declaration(AnnotationProperty(dcterms:title))
+Declaration(AnnotationProperty(vitro:ontologyPrefixAnnot))
+
+
+############################
+#   Classes
+############################
+
+# Class: :Abteilung (Division)
+
+AnnotationAssertion(obo:IAO_0000115 :Abteilung "Fachspezifische Forschungseinheit einer Hochschuleinrichtung"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Abteilung "Subject-specific research unit of a higher education institution"^^xsd:string)
+AnnotationAssertion(rdfs:label :Abteilung "Abteilung"@de-de)
+AnnotationAssertion(rdfs:label :Abteilung "Division"@en-us)
+SubClassOf(:Abteilung vivo:AcademicDepartment)
+SubClassOf(:Abteilung foaf:Organization)
+
+# Class: :Professur (Professur)
+
+AnnotationAssertion(obo:IAO_0000112 :Professur "Professur Mittellatein"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Professur "Fachspezifische Forschungseinheit einer Hochschuleinrichtung"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Professur "Subject-specific research unit of a higher education institution"^^xsd:string)
+AnnotationAssertion(rdfs:label :Professur "Professorship"@en-us)
+AnnotationAssertion(rdfs:label :Professur "Professur"@de-de)
+SubClassOf(:Professur foaf:Organization)
+
+# Class: :Seminar (Seminar)
+
+AnnotationAssertion(obo:IAO_0000112 :Seminar "Ägyptologisches Seminar"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Seminar "Fachspezifische Forschungseinheit einer Hochschuleinrichtung"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Seminar "Subject-specific research unit of a higher education institution"^^xsd:string)
+AnnotationAssertion(rdfs:label :Seminar "Seminar"@de-de)
+AnnotationAssertion(rdfs:label :Seminar "Seminar"@en-us)
+SubClassOf(:Seminar foaf:Organization)
+
+# Class: :Wissenschaftsbereich (Wissenschaftsbereich)
+
+AnnotationAssertion(obo:IAO_0000112 :Wissenschaftsbereich "Abteilung Ostasiatische Kunstgeschichte"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Wissenschaftsbereich "Forschungsbereich einer Hochschuleinrichtung"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 :Wissenschaftsbereich "Research field of a higher education institution"^^xsd:string)
+AnnotationAssertion(rdfs:label :Wissenschaftsbereich "Field Of Science"@en-us)
+AnnotationAssertion(rdfs:label :Wissenschaftsbereich "Wissenschaftsbereich"@de-de)
+SubClassOf(:Wissenschaftsbereich foaf:Organization)
+
+
+)
