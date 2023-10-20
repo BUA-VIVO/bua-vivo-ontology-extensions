@@ -1,6 +1,6 @@
 ![Build Status](https://github.com/BUA-VIVO/bua-vivo-ontology-extensions/workflows/Docs/badge.svg)
 
-# berlin University Alliance VIVO Ontology Extensions
+# Berlin University Alliance VIVO Ontology Extensions
 
 These ontologies are extensions of the VIVO and VIVO-DE ontologies, describing the German academic domain
 
