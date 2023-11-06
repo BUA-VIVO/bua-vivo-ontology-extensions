@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: Berlin University Alliance VIVO Ontology Extensions
+message: >-
+  If you use this software, please cite it using these
+  metadata.
+type: dataset
+authors:
+  - given-names: Rolf
+    family-names: Guescini
+    affiliation: Humboldt-Universität zu Berlin
+    orcid: 'https://orcid.org/0000-0003-4325-5751'
+repository-code: >-
+  https://github.com/BUA-VIVO/bua-vivo-ontology-extensions
+url: >-
+  https://bua-vivo.github.io/bua-vivo-ontology-extensions/
+abstract: >-
+  The Berlin University Alliance comprises 4 knowledge domains from 3 universities and one University Hospital, and as the institutional structures are termed differently in-between them, and sometimes also internally within domains and institutions, it is important that each member could model their own idiosyncrasies according to their own culture, while still being thematically closely related, as they inherit concepts from a common upper ontology securing a certain degree of computability between the institutions.
+keywords:
+  - VIVO
+  - Berlin University Alliance
+  - Ontology
+license: CC0-1.0
+version: '1.0.0'
+commit: https://github.com/BUA-VIVO/bua-vivo-ontology-extensions/tree/v1.0.0
+date-released: '2023-11-06'
